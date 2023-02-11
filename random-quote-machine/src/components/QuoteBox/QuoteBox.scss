@@ -1,0 +1,76 @@
+.quote {
+  width: min(30rem, 95vw);
+  padding: clamp(1rem, 1rem + 1vw, 2rem);
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+
+  figure {
+    margin: 0 0 1.2rem 0;
+  }
+
+  blockquote {
+    margin: 0 0 0.7rem 0;
+    text-align: center;
+    font-size: clamp(1.2rem, 1rem + 1vw, 2rem);
+  }
+
+  &__text {
+    margin: 0 0 0 0.5rem;
+    text-align: center;
+  }
+
+  &__author {
+    text-align: right;
+    font-size: clamp(0.8rem, 1rem + 0.5vw, 1.2rem);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-links {
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+  }
+
+  &__link {
+    text-decoration: none;
+    
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      height: 100%;
+      aspect-ratio: 1/1;
+      color: #ffffff;
+      border-radius: 0.2rem;
+      background-color: hsl(220, 97%, 74%);
+      transition: background-color 150ms ease-out;
+
+      &:is(:hover, :focus-visible) {
+        cursor: pointer;
+        background-color: hsl(220, 97%, 78%);
+      }
+    }
+  }
+
+  &__button {
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background-color: hsl(220, 97%, 74%);
+    transition: background-color 150ms ease-out;
+
+    &:is(:hover, :focus-visible) {
+      cursor: pointer;
+      background-color: hsl(220, 97%, 78%);
+    }
+  }
+}
