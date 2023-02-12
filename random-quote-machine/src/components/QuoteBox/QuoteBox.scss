@@ -51,11 +51,11 @@
       color: #ffffff;
       border-radius: 0.2rem;
       background-color: hsl(220, 97%, 74%);
-      transition: background-color 150ms ease-out;
+      transition: opacity 150ms ease-out;
 
       &:is(:hover, :focus-visible) {
         cursor: pointer;
-        background-color: hsl(220, 97%, 78%);
+        opacity: 0.8;
       }
     }
   }
@@ -66,11 +66,11 @@
     padding: 0.5rem 1rem;
     color: #ffffff;
     background-color: hsl(220, 97%, 74%);
-    transition: background-color 150ms ease-out;
+    transition: opacity 150ms ease-out;
 
     &:is(:hover, :focus-visible) {
       cursor: pointer;
-      background-color: hsl(220, 97%, 78%);
+      opacity: 0.8;
     }
   }
 }
