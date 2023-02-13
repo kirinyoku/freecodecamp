@@ -21,12 +21,12 @@ export default function QuoteBox( { quote, newQuote } ) {
       <footer className='quote__footer'>
         <ul className='quote__social-links' aria-label='social link list'>
           <li aria-label='twitter'>
-            <a className='quote__link' href={`https://twitter.com/intent/tweet?hashtags=quotes&text=\"${quote.text}\" ${quote.auth}`} id="tweet-quote" rel="noreferrer" target="_blank">
+            <a className='quote__link' href={`https://twitter.com/intent/tweet?hashtags=quotes&text="${quote.text}" ${quote.auth}`} id="tweet-quote" rel="noreferrer" target="_blank">
               <i className="fa fa-twitter icon" style={{backgroundColor: quote.color}}></i>
             </a>
           </li>
           <li aria-label='tumblr' id="tumblr-quote">
-            <a className='quote__link' href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quote.auth}&content=\"${quote.text}\"&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`} rel="noreferrer" target="_blank">
+            <a className='quote__link' href={`https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quote.auth}&content="${quote.text}"&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`} rel="noreferrer" target="_blank">
               <i className='fa fa-tumblr icon' style={{backgroundColor: quote.color}}></i>
             </a>
           </li>
