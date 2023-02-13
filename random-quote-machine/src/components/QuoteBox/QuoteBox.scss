@@ -17,11 +17,13 @@
   &__text {
     margin: 0 0 0 0.5rem;
     text-align: center;
+    transition: color 150ms linear;
   }
 
   &__author {
     text-align: right;
     font-size: clamp(0.8rem, 1rem + 0.5vw, 1.2rem);
+    transition: color 150ms linear;
   }
 
   &__footer {
@@ -51,7 +53,7 @@
       color: #ffffff;
       border-radius: 0.2rem;
       background-color: hsl(220, 97%, 74%);
-      transition: opacity 150ms ease-out;
+      transition: opacity 150ms ease-out, background-color 150ms linear;
 
       &:is(:hover, :focus-visible) {
         cursor: pointer;
@@ -66,7 +68,7 @@
     padding: 0.5rem 1rem;
     color: #ffffff;
     background-color: hsl(220, 97%, 74%);
-    transition: opacity 150ms ease-out;
+    transition: opacity 150ms ease-out, background-color 150ms linear;
 
     &:is(:hover, :focus-visible) {
       cursor: pointer;
