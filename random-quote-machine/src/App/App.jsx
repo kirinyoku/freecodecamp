@@ -1,6 +1,6 @@
-import React from 'react'
-import QuoteBox from '../QuoteBox/QuoteBox'
-import QuoteService from '../../services/QuoteService';
+import React from 'react';
+import QuoteBox from '../components/QuoteBox/QuoteBox';
+import QuoteService from '../services/QuoteService';
 import { useState, useEffect } from 'react';
 
 import './App.scss';
