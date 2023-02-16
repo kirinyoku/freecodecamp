@@ -1,9 +1,11 @@
 .app {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
+  width: min(1440px, 95%);
   height: 100vh;
   height: 100dvh;
-  padding: 1rem;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
   gap: 1rem;
 
   @media (min-width: 768px) {

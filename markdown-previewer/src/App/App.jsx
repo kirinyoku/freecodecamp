@@ -1,6 +1,6 @@
-import { useState } from 'react';
 import Editor from '../components/Editor/Editor';
 import Previewer from '../components/Previewer/Previewer';
+import { useState } from 'react';
 import './App.scss';
 
 function App() {

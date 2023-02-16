@@ -1,5 +1,6 @@
 :root {
-  --primary-color: rgb(125, 168, 253);
+  --primary-color: hsl(0, 0%, 0%);
+  --secondary-color: hsl(0, 0%, 100%);
 }
 
 html {
@@ -43,4 +44,23 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #root, #__next {
   isolation: isolate;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 6px;
+  width: 6px;
+}
+.scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: hsla(0, 0%, 0%, 0.1);
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: hsla(0, 0%, 0%, 0.2);
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 0%, 0.4);
+}
+.scroll::-webkit-scrollbar-thumb:active {
+  background: hsla(0, 0%, 0%, 0.9);
 }

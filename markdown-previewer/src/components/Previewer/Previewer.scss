@@ -3,18 +3,31 @@
   margin: 0 auto;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: hsl(0, 0%, 100%);
-  overflow: hidden;
+  background-color: var(--secondary-color);
+  overflow-y: hidden;
 
   &__title {
     color: var(--primary-color);
+    padding-bottom: 0.1em;
     font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
     border-bottom: 2px solid var(--primary-color);
+
+    sup {
+      font-size: 0.65em;
+      animation: blink 1s steps(2, start) infinite;
+      -webkit-animation: blink 1s steps(2, start) infinite;
+
+      @keyframes blink {
+        to {
+          visibility: hidden;
+        }
+      }
+    }
   }
 
   &__markdown {
     width: 100%;
-    height: 100%;
+    height: 95%;
     margin-top: 0.5rem;
     overflow-y: scroll;
   }
