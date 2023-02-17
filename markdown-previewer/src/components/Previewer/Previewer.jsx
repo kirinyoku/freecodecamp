@@ -4,13 +4,13 @@ import './Previewer.scss';
 
 export default function Previewer({ input }) {
   return (
-    <div className='previewer'>
+    <section className='previewer' aria-label='previewer'>
       <header className='previewer__header'>
         <h2 className='previewer__title'>Live Preview <sup>🔴</sup></h2>
       </header>
-      <ReactMarkdown className='previewer__markdown scroll' id='preview'>
+      <ReactMarkdown className='previewer__markdown scroll' id='preview' aria-label='previewer output field'>
         {input}
       </ReactMarkdown>
-    </div>
+    </section>
   )
 }

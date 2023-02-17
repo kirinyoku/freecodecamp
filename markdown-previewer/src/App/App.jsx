@@ -12,10 +12,10 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <main className="app" aria-label='application'>
       <Editor input={input} inputHandler={inputHandler} />
       <Previewer input={input} />
-    </div>
+    </main>
   );
 }
 
