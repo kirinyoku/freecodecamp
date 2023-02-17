@@ -19,6 +19,7 @@ body {
   height: 100dvh;
   padding: 0;
   margin: 0;
+  font-family: arial;
   background-color: hsl(0, 0%, 10%);
   -webkit-font-smoothing: antialiased;
 }
@@ -29,7 +30,7 @@ img, picture, video, canvas, svg {
 }
 
 input, button, textarea, select {
-  font: inherit;
+  font-family: inherit;
 }
 
 textarea {
@@ -37,9 +38,10 @@ textarea {
 }
 
 p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
   margin: 0;
   padding: 0;
+  font-family: inherit;
+  overflow-wrap: break-word;
 }
 
 #root, #__next {
