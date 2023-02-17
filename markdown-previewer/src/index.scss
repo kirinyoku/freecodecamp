@@ -1,6 +1,6 @@
 :root {
-  --primary-color: hsl(0, 0%, 0%);
-  --secondary-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(0, 2%, 26%);
 }
 
 html {
@@ -19,7 +19,7 @@ body {
   height: 100dvh;
   padding: 0;
   margin: 0;
-  background-color: var(--primary-color);
+  background-color: hsl(0, 0%, 10%);
   -webkit-font-smoothing: antialiased;
 }
 

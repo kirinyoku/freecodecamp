@@ -8,6 +8,7 @@
 
   &__title {
     color: var(--primary-color);
+    height: 1.5em;
     padding-bottom: 0.1em;
     font-size: clamp(1.2rem, 1rem + 1vw, 1.5rem);
     border-bottom: 2px solid var(--primary-color);
@@ -20,5 +21,7 @@
     outline: none;
     margin-top: 0.5rem;
     overflow-y: scroll;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
   }
 }
