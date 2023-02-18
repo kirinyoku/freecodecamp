@@ -1,6 +1,6 @@
 :root {
   --primary-color: hsl(0, 0%, 100%);
-  --secondary-color: hsl(0, 2%, 26%);
+  --secondary-color: hsl(0, 0%, 32%);
 }
 
 html {
@@ -42,6 +42,10 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0;
   font-family: inherit;
   overflow-wrap: break-word;
+}
+
+a {
+  color: hsl(266, 100%, 80%);
 }
 
 #root, #__next {
