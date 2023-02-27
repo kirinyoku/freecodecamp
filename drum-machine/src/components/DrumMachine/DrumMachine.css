@@ -1,0 +1,35 @@
+.drum-machine {
+  display: grid;
+  width: fit-content;
+  place-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 70%);
+  border: 0.3rem solid hsl(39, 100%, 50%);
+}
+
+@media (min-width: 60rem) {
+  .drum-machine {
+    grid-auto-flow: column;
+  }
+}
+
+.pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: fit-content;
+  gap: 0.5rem;
+}
+
+@media (min-width: 60rem) {
+}
+
+.display {
+  width: 10rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-family: monospace;
+  background-color: hsl(0, 0%, 89%);
+}
