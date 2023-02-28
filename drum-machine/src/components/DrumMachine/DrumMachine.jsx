@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { DrumPad } from '../DrumPad/DrumPad';
 import Heater1 from '../../assets/Heater-1.mp3';
 import Heater2 from '../../assets/Heater-2.mp3';
@@ -15,7 +15,6 @@ import './DrumMachine.css';
 export const DrumMachine = React.memo(() => {
 
   const [sampleName, setSampleName] = useState('Heater-1');
-  const [volume, setVolume] = useState(50);
   const drumPadLabels = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c'];
 
   const heater1 = new Audio(Heater1);
