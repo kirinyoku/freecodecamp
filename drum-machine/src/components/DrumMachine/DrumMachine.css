@@ -33,3 +33,8 @@
   font-family: monospace;
   background-color: hsl(0, 0%, 89%);
 }
+
+.controls {
+  display: grid;
+  gap: 1rem;
+}
