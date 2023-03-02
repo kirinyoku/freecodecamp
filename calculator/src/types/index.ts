@@ -1,5 +1,6 @@
 type Props = {
-  children: string | JSX.Element | JSX.Element[]
+  className?: string
+  children: string | JSX.Element | JSX.Element[],
 }
 
 export default Props;
