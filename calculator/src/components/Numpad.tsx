@@ -1,11 +1,12 @@
 import React from 'react';
+import Props from '../types';
 import Button from './UI/Button';
 
 export default function Numpad() {
 
   return (
-    <div className='grid gap-4 grid-cols-3 max-w-sm'>
-      <Button className="bg-red-500">AC</Button>
+    <div className='grid grid-cols-4 gap-0.5 max-w-xs bg-black p-2'>
+      <Button className="bg-red-500 col-span-2">AC</Button>
       <Button className='bg-gray-400'>/</Button>
       <Button className='bg-gray-400'>x</Button>
       <Button className='bg-gray-600'>7</Button>
@@ -19,9 +20,9 @@ export default function Numpad() {
       <Button className='bg-gray-600'>1</Button>
       <Button className='bg-gray-600'>2</Button>
       <Button className='bg-gray-600'>3</Button>
-      <Button className='bg-gray-600'>0</Button>
+      <Button className='bg-blue-500 row-span-2'>=</Button>
+      <Button className='bg-gray-600 col-span-2'>0</Button>
       <Button className='bg-gray-600'>.</Button>
-      <Button className='bg-blue-500' >=</Button>
     </div>
   )
 }

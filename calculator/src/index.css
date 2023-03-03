@@ -29,6 +29,9 @@ body {
   5. Improve text rendering
 */
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
