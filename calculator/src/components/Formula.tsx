@@ -1,14 +1,17 @@
-import React from 'react';
+import { State } from '../types';
+import { useSelector } from 'react-redux';
 
 export default function Formula() {
+  const formula = useSelector((state: State) => state.formula);
+
   return (
     <div>
-      <input 
+      <input
         readOnly
-        value={0} 
+        value={formula}
         type="text"
-        className='w-full bg-black text-[#ecb939] text-right text-2xl outline-none' 
+        className="w-full bg-black text-[#ecb939] text-right text-2xl outline-none"
       />
     </div>
-  )
+  );
 }
