@@ -10,7 +10,7 @@ export default function Formula() {
         readOnly
         value={formula}
         type="text"
-        className="w-full bg-black text-[#ecb939] text-right text-2xl outline-none"
+        className="w-full bg-black text-[#ecb939] text-right text-2xl leading-none outline-none"
       />
     </div>
   );

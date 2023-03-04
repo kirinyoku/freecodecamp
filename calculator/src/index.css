@@ -32,7 +32,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.5;
+  font-family: monospace;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
 /*
@@ -55,6 +56,7 @@ textarea,
 select {
   font: inherit;
 }
+
 /*
   8. Avoid text overflows
 */

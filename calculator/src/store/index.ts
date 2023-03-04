@@ -4,10 +4,11 @@ import { Action } from '../types';
 const ACTIONS = {
   formula: 'CHANGE_FORMULA',
   outScreen: 'CHANGE_OUTSCREEN',
+  reset: 'RESET',
 };
 
 const initialState = {
-  formula: '0',
+  formula: '',
   outScreen: 0,
 };
 
@@ -16,12 +17,17 @@ const reducer = (state = initialState, action: Action) => {
     case ACTIONS.formula:
       return {
         ...state,
-        formula: action.payload,
+        formula: state.formula + action.payload,
       };
     case ACTIONS.outScreen:
       return {
         ...state,
         outScreen: action.payload,
+      };
+    case ACTIONS.reset:
+      return {
+        formula: '',
+        outScreen: 0,
       };
     default:
       return state;

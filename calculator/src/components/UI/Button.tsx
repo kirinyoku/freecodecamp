@@ -8,6 +8,12 @@ export default function Button(props: Props) {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const keyValue = e.currentTarget.textContent;
+    if (keyValue !== 'AC' && keyValue !== '=') {
+      dispatch({
+        type: ACTIONS.formula,
+        payload: keyValue,
+      });
+    }
     // checking if the key value is a number
     if (!Number.isNaN(Number(keyValue))) {
       dispatch({
@@ -17,15 +23,14 @@ export default function Button(props: Props) {
     }
     if (keyValue === 'AC') {
       dispatch({
-        type: ACTIONS.outScreen,
-        payload: 0,
+        type: ACTIONS.reset,
       });
     }
   };
 
   return (
     <button
-      onClick={(e) => handleClick(e)}
+      onClick={handleClick}
       className={`py-6 px-8 text-white text-xl hover:opacity-80 transition-opacity ${props.className}`}>
       {props.children}
     </button>

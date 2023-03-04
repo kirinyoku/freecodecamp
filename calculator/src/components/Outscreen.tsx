@@ -10,7 +10,7 @@ export default function Outscreen() {
         readOnly
         value={outScreen}
         type="text"
-        className="w-full bg-black text-white text-right text-2xl outline-none"
+        className="w-full bg-black text-white text-right text-2xl leading-none outline-none"
       />
     </div>
   );
