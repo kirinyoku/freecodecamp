@@ -2,7 +2,9 @@ import { State } from '../types';
 import { useSelector } from 'react-redux';
 
 export default function Formula() {
-  const formula = useSelector((state: State) => state.formula);
+  const previousOperand = useSelector((state: State) => state.previousOperand);
+  const operation = useSelector((state: State) => state.operation);
+  const formula = previousOperand + operation;
 
   return (
     <div>

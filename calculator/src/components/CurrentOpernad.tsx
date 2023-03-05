@@ -2,7 +2,7 @@ import { State } from '../types';
 import { useSelector } from 'react-redux';
 
 export default function Outscreen() {
-  const outScreen = useSelector((state: State) => state.outScreen);
+  const outScreen = useSelector((state: State) => state.currentOpernad);
 
   return (
     <div>

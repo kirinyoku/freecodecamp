@@ -8,22 +8,26 @@ export default function Button(props: Props) {
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const keyValue = e.currentTarget.textContent;
-    if (keyValue !== 'AC' && keyValue !== '=') {
+    if (!Number.isNaN(Number(keyValue)) || keyValue === '.') {
       dispatch({
-        type: ACTIONS.formula,
-        payload: keyValue,
-      });
-    }
-    // checking if the key value is a number
-    if (!Number.isNaN(Number(keyValue))) {
-      dispatch({
-        type: ACTIONS.outScreen,
+        type: ACTIONS.ADD_DIGITS,
         payload: keyValue,
       });
     }
     if (keyValue === 'AC') {
       dispatch({
-        type: ACTIONS.reset,
+        type: ACTIONS.RESET,
+      });
+    }
+    if (keyValue === '+' || keyValue === '-' || keyValue === '÷' || keyValue === 'x') {
+      dispatch({
+        type: ACTIONS.CHOOSE_OPERATION,
+        payload: keyValue,
+      });
+    }
+    if (keyValue === '=') {
+      dispatch({
+        type: ACTIONS.EVALUATE,
       });
     }
   };

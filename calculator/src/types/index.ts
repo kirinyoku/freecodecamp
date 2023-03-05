@@ -11,6 +11,8 @@ export type Action = {
 };
 
 export type State = {
-  formula: string;
-  outScreen: number;
+  previousOperand: string;
+  currentOpernad: string;
+  operation: string;
+  overwrite: boolean;
 };
