@@ -35,7 +35,7 @@ export default function Button(props: Props) {
   return (
     <button
       onClick={handleClick}
-      className={`py-6 px-8 text-white text-xl hover:opacity-80 transition-opacity ${props.className}`}>
+      className={`py-4 px-6 text-white text-xl hover:opacity-80 transition-opacity ${props.className}`}>
       {props.children}
     </button>
   );

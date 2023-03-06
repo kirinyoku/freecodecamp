@@ -2,7 +2,7 @@ import Button from './Button';
 
 export default function Numpad() {
   return (
-    <div className="grid grid-cols-4 gap-0.5 max-w-xs bg-black p-2">
+    <div className="grid grid-cols-4 gap-0.5 max-w-xs bg-black p-1">
       <Button className="bg-red-500 col-span-2">AC</Button>
       <Button className="bg-gray-400">÷</Button>
       <Button className="bg-gray-400">x</Button>
