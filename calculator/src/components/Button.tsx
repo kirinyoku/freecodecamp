@@ -1,6 +1,6 @@
 import React from 'react';
-import { Props } from '../../types';
-import { ACTIONS } from '../../store';
+import { Props } from '../types';
+import { ACTIONS } from '../store';
 import { useDispatch } from 'react-redux';
 
 export default function Button(props: Props) {

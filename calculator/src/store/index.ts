@@ -11,50 +11,51 @@ const ACTIONS = {
 
 const initialState = {
   previousOperand: '',
-  currentOpernad: '',
+  currentOperand: '',
   operation: '',
   overwrite: false,
 };
 
-const reducer = (state = initialState, action: Action) => {
+const reducer = (state: State = initialState, action: Action): State => {
   switch (action.type) {
     case ACTIONS.ADD_DIGITS:
       if (state.overwrite) {
         return {
           ...state,
-          currentOpernad: action.payload,
+          currentOperand: action.payload,
           overwrite: false,
         };
       }
-      if (action.payload === '0' && state.currentOpernad === '0') {
+      if (action.payload === '0' && state.currentOperand === '0') {
         return state;
       }
-      if (action.payload === '.' && state.currentOpernad.includes('.')) {
+      if (action.payload === '.' && state.currentOperand.includes('.')) {
         return state;
       }
       return {
         ...state,
-        currentOpernad: `${state.currentOpernad ?? ''}${action.payload}`,
+        currentOperand: `${state.currentOperand ?? ''}${action.payload}`,
       };
     case ACTIONS.RESET:
       return {
+        ...state,
         previousOperand: '',
-        currentOpernad: '',
+        currentOperand: '',
         operation: '',
       };
     case ACTIONS.CHOOSE_OPERATION:
-      if (state.currentOpernad === '' && state.previousOperand === '') {
+      if (state.currentOperand === '' && state.previousOperand === '') {
         return state;
       }
       if (state.previousOperand === '') {
         return {
           ...state,
           operation: action.payload,
-          previousOperand: state.currentOpernad,
-          currentOpernad: '',
+          previousOperand: state.currentOperand,
+          currentOperand: '',
         };
       }
-      if (state.currentOpernad === '') {
+      if (state.currentOperand === '') {
         return {
           ...state,
           operation: action.payload,
@@ -64,10 +65,10 @@ const reducer = (state = initialState, action: Action) => {
         ...state,
         previousOperand: evaluate(state),
         operation: action.payload,
-        currentOpernad: '',
+        currentOperand: '',
       };
     case ACTIONS.EVALUATE:
-      if (state.operation === '' || state.currentOpernad === '' || state.previousOperand === '') {
+      if (state.operation === '' || state.currentOperand === '' || state.previousOperand === '') {
         return state;
       }
       return {
@@ -75,7 +76,7 @@ const reducer = (state = initialState, action: Action) => {
         overwrite: true,
         previousOperand: '',
         operation: '',
-        currentOpernad: evaluate(state),
+        currentOperand: evaluate(state),
       };
     default:
       return state;
@@ -84,7 +85,7 @@ const reducer = (state = initialState, action: Action) => {
 
 const evaluate = (state: State) => {
   const prev = parseFloat(state.previousOperand);
-  const current = parseFloat(state.currentOpernad);
+  const current = parseFloat(state.currentOperand);
   if (isNaN(prev) || isNaN(current)) {
     return '';
   }
@@ -106,6 +107,6 @@ const evaluate = (state: State) => {
   return computation.toString();
 };
 
-const store = createStore(reducer);
+const store = createStore(reducer, initialState);
 
 export { store, ACTIONS };

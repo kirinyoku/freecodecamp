@@ -7,12 +7,12 @@ export type Props = {
 
 export type Action = {
   type: string;
-  payload?: any;
+  payload: string;
 };
 
 export type State = {
   previousOperand: string;
-  currentOpernad: string;
+  currentOperand: string;
   operation: string;
   overwrite: boolean;
 };
